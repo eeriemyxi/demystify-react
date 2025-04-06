@@ -163,9 +163,9 @@ through the following resources entirely:
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 * https://eloquentjavascript.net/10_modules.html
 
-Earlier, React was providing prebuild [UMD modules](https://github.com/umdjs/umd), however they've since
-stopped doing that and now because of all that, I'll also be demonstrating the new
-way:
+Earlier, React was providing prebuild [UMD
+modules](https://github.com/umdjs/umd), however they've since stopped doing that
+and now because of all that, I'll also be demonstrating the new way:
 
 This is the `App.vanilla.js` file:
 ```js
@@ -204,3 +204,9 @@ This is the `index.html` file:
   </bod>y
 </html>
 ```
+
+# Additional Resources
+  * [Sunsetting Create React App](https://react.dev/blog/2025/02/14/sunsetting-create-react-app)
+  * [Rendering on the Web](https://web.dev/articles/rendering-on-the-web)
+  * <https://esm.sh/#docs>
+  * [How Does Esm.Sh Convert These ESM Modules from CJS Modules?](https://github.com/esm-dev/esm.sh/discussions/595)
