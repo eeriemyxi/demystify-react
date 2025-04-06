@@ -75,8 +75,7 @@ bun install @babel/{core,cli,preset-react}
 ```
 
 > [!NOTE] 
-> I will be using Bun instead of Node, or Deno, or something else, for
-> my own convenience.
+> I will be using [Bun](https://bun.sh) runtime for convenience.
 
 * `core` contains the compiler from Babel
 * `cli` is source code for their CLI interface
@@ -89,15 +88,13 @@ bun run sh
 babel App.js --outfile App.vanilla.js --presets "@babel/preset-react"
 ```
 
-We specify the preset to use by the `--presets` CLI flag, some may use another
-method, like creating a configuration file.
+We specify the preset to use by the `--presets` CLI fla. You might also see a [config file](https://babeljs.io/docs/config-files) being used in other projects.
 
 # Minimal Example For React v18
-All the help that React brings is in a single JavaScript file that doesn't
-require any server-side runtimes. It is all client-side.
+All the help that React brings are in two JavaScript files that don't require any server-side runtimes. It is all client-side.
 
 The server-side libraries that React in its documentation tells you to use, only
-provide a bunch of magical functionalities that aid in generating client-side
+provide a bunch of magical utilities that aid in generating client-side
 Javascript code.
 
 We will now be creating a new project directory, then moving our generated
@@ -122,9 +119,7 @@ cd $DIR
 ```
 
 Now we need to grab the React client-side runtime. I'll using [jsDelivr](https://jsdelivr.net) CDN,
-but there is also [https://unpkg.com/](UNPKG).
-
-You can find the files for React [here](https://app.unpkg.com/react@18.3.1). 
+but there is also [UNPKG](https://unpkg.com/).
 
 Now, we create an `index.html` file,
 
@@ -157,15 +152,14 @@ versions above v18. To understand why, we need to understand how modules in
 JavaScript work.
 
 Modules in JavaScript are a complicated mess and I would highly recommend going
-through the following resources entirely:
+through the following resources entirely to understand them:
 
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 * https://eloquentjavascript.net/10_modules.html
 
-Earlier, React was providing prebuild [UMD
-modules](https://github.com/umdjs/umd), however they've since stopped doing that
-and now because of all that, I'll also be demonstrating the new way:
+Earlier, React was providing prebuilt [UMD
+modules](https://github.com/umdjs/umd), however they've since stopped doing that and now because of that we need to do the following:
 
 This is the `App.vanilla.js` file:
 ```js
@@ -204,6 +198,8 @@ This is the `index.html` file:
   </bod>y
 </html>
 ```
+
+Run it with a web server and it should just work.
 
 # Additional Resources
   * [Sunsetting Create React App](https://react.dev/blog/2025/02/14/sunsetting-create-react-app)
